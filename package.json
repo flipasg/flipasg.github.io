@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage":"https://flipasg.github.io/",
+  "homepage": "https://flipasg.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,10 +13,14 @@
     "lint": "eslint './**/*.{ts,tsx}' --ignore-path .gitignore",
     "format": "prettier --write . --ignore-path .gitignore",
     "hygen": "hygen",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
