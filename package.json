@@ -1,8 +1,9 @@
 {
-  "name": "flipasg-web",
+  "name": "flipasg.github.io",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "homepage":"https://flipasg.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,7 +12,9 @@
     "serve": "vite preview --port 3000",
     "lint": "eslint './**/*.{ts,tsx}' --ignore-path .gitignore",
     "format": "prettier --write . --ignore-path .gitignore",
-    "hygen": "hygen"
+    "hygen": "hygen",
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -33,6 +36,7 @@
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-testing-library": "^5.5.1",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
