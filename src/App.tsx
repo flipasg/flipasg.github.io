@@ -1,5 +1,6 @@
 import Home from '@/components/home/Home'
 import { createTheme, CssBaseline, Grid, ThemeProvider } from '@mui/material'
+import Footer from './components/footer/Footer'
 const theme = createTheme({
   palette: {
     primary: {
@@ -57,8 +58,9 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid container>
+      <Grid container component={'main'}>
         <Home />
+        <Footer />
       </Grid>
     </ThemeProvider>
   )
