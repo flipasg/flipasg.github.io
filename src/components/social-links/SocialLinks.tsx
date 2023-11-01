@@ -53,9 +53,10 @@ const SOCIAL_LINKS = [
 ]
 export default function SocialLinks({
   color = 'secondary',
-}: Partial<{ color: any }>) {
+  ml = 0,
+}: Partial<{ color: any; ml: number }>) {
   return (
-    <Grid item>
+    <Grid item ml={ml}>
       <List component={Stack} direction='row' sx={{ width: 'fit-content' }}>
         {SOCIAL_LINKS.map(({ key, href, icon }) => (
           <ListItem key={key} component='a' target='_blank' href={href}>

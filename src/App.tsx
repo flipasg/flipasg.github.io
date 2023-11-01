@@ -1,23 +1,25 @@
 import Home from '@/components/home/Home'
 import { createTheme, CssBaseline, Grid, ThemeProvider } from '@mui/material'
 import Footer from './components/footer/Footer'
+import AboutMe from './components/about-me/AboutMe'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#000C24',
+      main: '#2A2E44',
     },
     secondary: {
-      main: '#FBFBFB',
+      main: '#DCA780',
     },
     text: {
-      primary: '#000C24',
-      secondary: '#F44336',
+      primary: '#DCA780',
+      secondary: '#BC8381',
     },
     common: {
       white: '#FBFBFB',
     },
   },
   typography: {
+    fontFamily: ['Old Standard TT', 'serif'].join(','),
     h1: {
       fontWeight: 700,
       fontSize: 32,
@@ -41,7 +43,7 @@ const theme = createTheme({
       fontWeight: 600,
     },
     body1: {
-      fontSize: 24,
+      fontSize: 18,
     },
   },
   breakpoints: {
@@ -60,6 +62,7 @@ export default function App() {
       <CssBaseline />
       <Grid container component={'main'}>
         <Home />
+        <AboutMe />
         <Footer />
       </Grid>
     </ThemeProvider>
