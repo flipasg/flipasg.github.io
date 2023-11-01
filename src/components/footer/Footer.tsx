@@ -1,4 +1,3 @@
-import Image from '@/assets/footer.svg'
 import { Box, Grid, Typography } from '@mui/material'
 import SocialLinks from '../social-links/SocialLinks'
 export default function Footer() {
@@ -11,10 +10,8 @@ export default function Footer() {
       textAlign={'center'}
       sx={{
         height: '100px',
-        background: `url(${Image}) no-repeat`,
         backgroundColor: 'primary.main',
         backgroundSize: '150px',
-        backgroundPosition: 'right',
       }}
     >
       <Box px={4}>
