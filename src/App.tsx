@@ -2,8 +2,13 @@ import Home from '@/components/home/Home'
 import { createTheme, CssBaseline, Grid, ThemeProvider } from '@mui/material'
 import Footer from './components/footer/Footer'
 import AboutMe from './components/about-me/AboutMe'
+import Skills from './components/skills/Skills'
 const theme = createTheme({
   palette: {
+    background: {
+      default: '#2A2E44',
+      paper: '#727CCA',
+    },
     primary: {
       main: '#2A2E44',
     },
@@ -49,10 +54,10 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600,
-      md: 1024,
-      lg: 1280,
-      xl: 1920,
+      sm: 700,
+      md: 850,
+      lg: 1024,
+      xl: 1280,
     },
   },
 })
@@ -63,6 +68,7 @@ export default function App() {
       <Grid container component={'main'}>
         <Home />
         <AboutMe />
+        <Skills />
         <Footer />
       </Grid>
     </ThemeProvider>

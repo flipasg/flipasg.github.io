@@ -12,7 +12,7 @@ export default function AboutMe() {
       sx={{
         backgroundColor: 'common.white',
       }}
-      py={6}
+      p={6}
     >
       <Grid container direction={'column'} maxWidth={'md'} mb={2}>
         <Typography variant='h2' color={'secondary'} fontSize={36} mb={2}>

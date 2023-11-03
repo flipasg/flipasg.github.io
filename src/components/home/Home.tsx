@@ -1,6 +1,6 @@
 import Image from '@/assets/stars.png'
 import Portrait from '@/assets/skeched-portrait.jpg'
-import { Avatar, Grid, Typography } from '@mui/material'
+import { Avatar, Grid, Hidden, Typography } from '@mui/material'
 
 import { Box } from '@mui/system'
 import SocialLinks from '../social-links/SocialLinks'
@@ -19,17 +19,26 @@ export default function Home() {
     >
       <Grid
         container
-        direction='row'
+        direction={{ xs: 'column', md: 'row' }}
         alignItems={'center'}
         justifyContent={'space-between'}
         maxWidth={'md'}
         mx={'auto'}
       >
-        <Grid item direction='column'>
+        <Grid item direction='column' p={{ xs: 9, md: 0 }}>
           <Grid item>
             <Box>
               <Typography variant='h1' color={'secondary'} fontSize={60}>
-                Iker Garcia Ramirez
+                Iker Garcia{' '}
+                <Typography
+                  variant='h1'
+                  color={'secondary'}
+                  fontSize={60}
+                  component='span'
+                  sx={{ display: { xs: 'none', sm: 'inline-block' } }}
+                >
+                  Ramirez
+                </Typography>
               </Typography>
               <Typography variant='body1' color={'textSecondary'} fontSize={40}>
                 Frontend Engineer
