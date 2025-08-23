@@ -1,8 +1,9 @@
 import Image from '@/assets/stars.png'
 import Portrait from '@/assets/skeched-portrait.jpg'
-import { Avatar, Grid, Hidden, Typography } from '@mui/material'
-
+import { Avatar, Hidden, Typography } from '@mui/material'
 import { Box } from '@mui/system'
+
+import Grid from '@mui/material/Grid2'
 import SocialLinks from '../social-links/SocialLinks'
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         backgroundColor: 'primary.main',
       }}
       component={'section'}
+      width={'100%'}
     >
       <Grid
         container
@@ -25,8 +27,8 @@ export default function Home() {
         maxWidth={'md'}
         mx={'auto'}
       >
-        <Grid item direction='column' p={{ xs: 9, md: 0 }}>
-          <Grid item>
+        <Grid direction='column' p={{ xs: 9, md: 0 }}>
+          <Grid>
             <Box>
               <Typography variant='h1' color={'secondary'} fontSize={60}>
                 Iker Garcia{' '}
@@ -47,9 +49,9 @@ export default function Home() {
           </Grid>
           <SocialLinks ml={-1.5} />
         </Grid>
-        <Grid item>
+        <Grid>
           <Avatar
-            alt='Cindy Baker'
+            alt='Iker Garcia'
             src={Portrait}
             sx={{ width: 200, height: 200 }}
           />

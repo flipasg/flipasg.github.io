@@ -1,5 +1,5 @@
-import { Button, Grid, Typography } from '@mui/material'
-import Pdf from '@/assets/IkerGarcia_CV.pdf'
+import { Typography } from '@mui/material'
+import Grid from '@mui/material/Grid2'
 import { CircularProgressWithLabel } from '../common/CircularProgressWithLabel'
 
 export default function Skills() {
@@ -14,6 +14,7 @@ export default function Skills() {
         backgroundColor: '#e8e8e8',
       }}
       p={6}
+      width={'100%'}
     >
       <Grid container direction={'column'} maxWidth={'md'} mb={2}>
         <Typography variant='h2' color={'secondary'} fontSize={36} mb={2}>

@@ -1,8 +1,10 @@
 import Home from '@/components/home/Home'
-import { createTheme, CssBaseline, Grid, ThemeProvider } from '@mui/material'
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import Footer from './components/footer/Footer'
 import AboutMe from './components/about-me/AboutMe'
 import Skills from './components/skills/Skills'
+import Grid from '@mui/material/Grid2'
+
 const theme = createTheme({
   palette: {
     background: {

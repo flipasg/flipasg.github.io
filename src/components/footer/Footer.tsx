@@ -1,5 +1,6 @@
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import SocialLinks from '../social-links/SocialLinks'
+import Grid from '@mui/material/Grid2'
 export default function Footer() {
   return (
     <Grid
@@ -13,9 +14,10 @@ export default function Footer() {
         backgroundColor: 'primary.main',
         backgroundSize: '150px',
       }}
+      width={'100%'}
     >
       <Box px={4}>
-        <Grid item>
+        <Grid>
           <Box pl={2}>
             <Typography variant='body1' color={'secondary'} fontSize={'medium'}>
               @flipasg

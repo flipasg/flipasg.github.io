@@ -6,13 +6,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PinterestIcon from '@mui/icons-material/Pinterest'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import {
-  Grid,
   List,
   ListItem,
   ListItemIcon,
   Stack,
   SvgIcon,
 } from '@mui/material'
+import Grid from '@mui/material/Grid2'
 
 const SOCIAL_LINKS = [
   {
@@ -56,7 +56,7 @@ export default function SocialLinks({
   ml = 0,
 }: Partial<{ color: any; ml: number }>) {
   return (
-    <Grid item ml={ml}>
+    <Grid ml={ml}>
       <List component={Stack} direction='row' sx={{ width: 'fit-content' }}>
         {SOCIAL_LINKS.map(({ key, href, icon }) => (
           <ListItem key={key} component='a' target='_blank' href={href}>
