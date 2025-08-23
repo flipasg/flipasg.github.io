@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import SocialLinks from '../social-links/SocialLinks'
+import SocialLinks from './SocialLinks'
 import Grid from '@mui/material/Grid2'
 export default function Footer() {
   return (
@@ -10,13 +10,14 @@ export default function Footer() {
       alignItems={'center'}
       textAlign={'center'}
       sx={{
-        height: '100px',
+        height: '200px',
         backgroundColor: 'primary.main',
         backgroundSize: '150px',
       }}
       width={'100%'}
     >
       <Box px={4}>
+        <SocialLinks justifyButtons='center' />
         <Grid>
           <Box pl={2}>
             <Typography variant='body1' color={'secondary'} fontSize={'medium'}>
@@ -24,7 +25,6 @@ export default function Footer() {
             </Typography>
           </Box>
         </Grid>
-        <SocialLinks />
       </Box>
     </Grid>
   )

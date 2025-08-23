@@ -1,5 +1,6 @@
-import { Button, Grid, Typography } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import Pdf from '@/assets/IkerGarcia_CV.pdf'
+import Grid from '@mui/material/Grid2'
 
 export default function AboutMe() {
   return (
@@ -13,6 +14,7 @@ export default function AboutMe() {
         backgroundColor: 'common.white',
       }}
       p={6}
+      width={'100%'}
     >
       <Grid container direction={'column'} maxWidth={'md'} mb={2}>
         <Typography variant='h2' color={'secondary'} fontSize={36} mb={2}>
@@ -32,15 +34,6 @@ export default function AboutMe() {
           projects and products in different technologies.
         </Typography>
       </Grid>
-      <Button
-        component='a'
-        href={Pdf}
-        target='_blank'
-        variant='contained'
-        color='primary'
-      >
-        Download CV
-      </Button>
     </Grid>
   )
 }

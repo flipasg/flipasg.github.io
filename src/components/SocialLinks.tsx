@@ -13,6 +13,7 @@ import {
   SvgIcon,
 } from '@mui/material'
 import Grid from '@mui/material/Grid2'
+import ActionButtons from './ActionButtons'
 
 const SOCIAL_LINKS = [
   {
@@ -54,7 +55,8 @@ const SOCIAL_LINKS = [
 export default function SocialLinks({
   color = 'secondary',
   ml = 0,
-}: Partial<{ color: any; ml: number }>) {
+  justifyButtons = 'flex-start',
+}: Partial<{ color: any; ml: number; justifyButtons: string }>) {
   return (
     <Grid ml={ml}>
       <List component={Stack} direction='row' sx={{ width: 'fit-content' }}>
@@ -66,6 +68,7 @@ export default function SocialLinks({
           </ListItem>
         ))}
       </List>
+      <ActionButtons justifyContent={justifyButtons} />
     </Grid>
   )
 }
