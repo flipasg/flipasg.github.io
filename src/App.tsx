@@ -1,5 +1,5 @@
 import Home from '@/components/Home'
-import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
+import { Box, createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import Footer from './components/Footer'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
@@ -69,9 +69,10 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid container component={'main'}>
+      <Grid container component={'main'} sx={{ backgroundColor: theme.palette.common.white }}>
         <Home />
         <AboutMe />
+        <Box sx={{ width: '100%', maxWidth: 'md', mx: 'auto', height: 2, bgcolor: theme.palette.secondary.main, borderRadius: 2 }} />
         <Skills />
         <Footer />
       </Grid>
