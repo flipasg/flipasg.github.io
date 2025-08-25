@@ -5,6 +5,7 @@ import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Grid from '@mui/material/Grid2'
 import Projects from './components/Projects'
+import Spotify from './components/Spotify'
 
 const theme = createTheme({
   palette: {
@@ -63,17 +64,22 @@ const theme = createTheme({
       xl: 1280,
     },
   },
-});
+})
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid container component={'main'} sx={{ backgroundColor: theme.palette.common.white }}>
+      <Grid
+        container
+        component={'main'}
+        sx={{ backgroundColor: theme.palette.common.white }}
+      >
         <Home />
         <AboutMe />
-        <Box sx={{ width: '100%', maxWidth: 'md', mx: 'auto', height: 2, bgcolor: theme.palette.secondary.main, borderRadius: 2 }} />
+        <Projects />
         <Skills />
+        <Spotify />
         <Footer />
       </Grid>
     </ThemeProvider>

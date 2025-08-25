@@ -64,7 +64,7 @@ export default function Skills() {
     >
       <Box sx={{ maxWidth: 'md', mx: 'auto', width: '100%' }}>
         <Typography variant='h2' color={'secondary'} fontSize={36} >
-          Skill-Set
+          Skills
         </Typography>
       </Box>
 
