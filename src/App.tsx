@@ -74,9 +74,9 @@ export default function App() {
         component={'main'}
         sx={{
           backgroundColor: theme.palette.common.white,
-          width: '100%', // Ensure the app fits within the viewport
-          maxWidth: '100vw', // Prevent content overflow
-          overflowX: 'hidden', // Avoid horizontal scrolling
+          width: '100%',
+          maxWidth: '100vw',
+          overflowX: 'hidden',
         }}
       >
         <Hero />
