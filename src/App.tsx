@@ -72,7 +72,12 @@ export default function App() {
       <Grid
         container
         component={'main'}
-        sx={{ backgroundColor: theme.palette.common.white }}
+        sx={{
+          backgroundColor: theme.palette.common.white,
+          width: '100%', // Ensure the app fits within the viewport
+          maxWidth: '100vw', // Prevent content overflow
+          overflowX: 'hidden', // Avoid horizontal scrolling
+        }}
       >
         <Hero />
         <AboutMe />
