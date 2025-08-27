@@ -39,26 +39,32 @@ export default function Skills() {
       container
       component='section'
       direction='column'
-      sx={{
-        px: { xs: 2, sm: 4 },
-        py: { xs: 6, sm: 8 },
-        backgroundColor: 'background.main',
-      }}
-      rowGap={4}
+      alignItems='center'
       justifyContent={'center'}
+      sx={{
+        py: { xs: 4, sm: 6 },
+      }}
       width={'100%'}
-      aria-labelledby='skills-heading'
     >
-      <Box sx={{ maxWidth: 'md', mx: 'auto', width: '100%' }}>
-        <Typography variant='h2' fontSize={36}>
-          Skills
-        </Typography>
-      </Box>
+      <Typography variant='h2' fontSize={36} mb={2} textAlign='center'>
+        Skills
+      </Typography>
+      <Divider
+        sx={{
+          width: '100%',
+          maxWidth: 'md',
+          mx: 'auto',
+          height: 2,
+          bgcolor: 'primary.main',
+          borderRadius: 1,
+          mb: 3,
+        }}
+      />
 
       <Grid
         container
         spacing={3}
-        sx={{ maxWidth: 'md', mx: 'auto', width: '100%' }}
+        sx={{ maxWidth: 'md', mx: 'auto', width: '100%', px: { xs: 2 } }}
       >
         {SKILLS.map((cat) => (
           <Grid key={cat.title} size={{ xs: 12, sm: 6 }}>
