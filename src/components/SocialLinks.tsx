@@ -68,7 +68,7 @@ export default function SocialLinks({
           </ListItem>
         ))}
       </List>
-      <ActionButtons justifyContent={justifyButtons} />
+      <ActionButtons justifyContent={justifyButtons} color={color} />
     </Grid>
   )
 }

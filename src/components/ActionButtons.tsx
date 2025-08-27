@@ -4,7 +4,8 @@ import Grid from '@mui/material/Grid2'
 
 export default function ActionButtons({
   justifyContent = 'flex-start',
-}: Partial<{ justifyContent: string }>) {
+  color = 'primary',
+}: Partial<{ justifyContent: string; color: 'primary' | 'secondary' }>) {
   return (
     <Grid
       container
@@ -17,6 +18,7 @@ export default function ActionButtons({
     >
       <Button
         component='a'
+        color={color}
         href={Pdf}
         target='_blank'
         variant='outlined'
@@ -25,6 +27,7 @@ export default function ActionButtons({
       </Button>
       <Button
         component='a'
+        color={color}
         variant='outlined'
         href='mailto:ikergarciadev@gmail.com'
         target='_blank'

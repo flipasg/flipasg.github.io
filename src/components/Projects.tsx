@@ -8,7 +8,7 @@ function Tile({ p }: { p: Project }) {
       component='article'
       sx={{
         position: 'relative',
-        height: { xs: 220, sm: 300, md: 360 },
+        height: 'auto', // Adjust height to fit content
         borderRadius: 2,
         overflow: 'hidden',
         boxShadow: '0 12px 36px rgba(0,0,0,.45)',
@@ -20,8 +20,7 @@ function Tile({ p }: { p: Project }) {
     >
       <Box
         sx={{
-          position: 'absolute',
-          inset: 0,
+          position: 'relative',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
@@ -44,12 +43,12 @@ function Tile({ p }: { p: Project }) {
             {p.company}
           </Typography>
         </Box>
-          <Box sx={{ borderBottom: '0.5px solid', borderColor: 'background.paper', my: 1 }} />
+        <Box sx={{ borderBottom: '0.5px solid', borderColor: 'background.paper', my: 1 }} />
 
         <Box>
           <Typography
             variant='body2'
-            sx={{  lineHeight: 1.5, color: 'text.secondary' }}
+            sx={{ lineHeight: 1.5, color: 'text.secondary' }}
           >
             {p.description}
           </Typography>
@@ -88,8 +87,19 @@ export default function Projects() {
       width='100%'
     >
       <Typography variant='h4' sx={{ px: 2 }}>
-        Selected Work
+        Work Experience
       </Typography>
+      <Box
+        sx={{
+          width: '100%',
+          maxWidth: 'md',
+          mx: 'auto',
+          height: 2,
+          bgcolor: 'primary.main',
+          borderRadius: 1,
+          mb: 3,
+        }}
+      />
 
       <Grid
         container
