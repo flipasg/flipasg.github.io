@@ -20,14 +20,12 @@ export default function ActionButtons({
         href={Pdf}
         target='_blank'
         variant='outlined'
-        color='secondary'
       >
         Download CV
       </Button>
       <Button
         component='a'
         variant='outlined'
-        color='secondary'
         href='mailto:ikergarciadev@gmail.com'
         target='_blank'
         rel='noreferrer'

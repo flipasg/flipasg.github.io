@@ -6,13 +6,13 @@ import { Box } from '@mui/system'
 import Grid from '@mui/material/Grid2'
 import SocialLinks from './SocialLinks'
 
-export default function Home() {
+export default function Hero() {
   return (
     <Grid
       container
       sx={{
         height: 'auto',
-        backgroundColor: 'primary.main',
+        backgroundColor: 'background.paper',
       }}
       component={'section'}
       width={'100%'}
@@ -30,11 +30,10 @@ export default function Home() {
         <Grid direction='column' p={{ xs: 0, md: 0 }}>
           <Grid>
             <Box>
-              <Typography variant='h1' color={'secondary'} fontSize={60}>
+              <Typography variant='h1' fontSize={60}>
                 Iker Garcia{' '}
                 <Typography
                   variant='h1'
-                  color={'secondary'}
                   fontSize={60}
                   component='span'
                   sx={{ display: { xs: 'none', sm: 'inline-block' } }}
@@ -42,7 +41,7 @@ export default function Home() {
                   Ramirez
                 </Typography>
               </Typography>
-              <Typography variant='body1' color={'textSecondary'} fontSize={40}>
+              <Typography variant='body1'  fontSize={40}>
                 Frontend Engineer
               </Typography>
             </Box>

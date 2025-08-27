@@ -53,7 +53,7 @@ const SOCIAL_LINKS = [
   },
 ]
 export default function SocialLinks({
-  color = 'secondary',
+  color = 'primary',
   ml = 0,
   justifyButtons = 'flex-start',
 }: Partial<{ color: any; ml: number; justifyButtons: string }>) {

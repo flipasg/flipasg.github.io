@@ -1,34 +1,33 @@
-import Home from '@/components/Home'
+import Hero from '@/components/Hero'
 import { Box, createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import Footer from './components/Footer'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Grid from '@mui/material/Grid2'
 import Projects from './components/Projects'
-import Spotify from './components/Spotify'
 
 const theme = createTheme({
   palette: {
     background: {
-      default: '#2A2E44',
-      paper: '#727CCA',
+      default: '#FBFBFB',
+      paper: '#c6d9ff',
     },
     primary: {
-      main: '#2A2E44',
+      main: '#00224e',
     },
     secondary: {
-      main: '#DCA780',
+      main: '#c6d9ff',
     },
     text: {
-      primary: '#DCA780',
-      secondary: '#BC8381',
+      primary: '#00224e',
+      secondary: '#c6d9ff',
     },
     common: {
       white: '#FBFBFB',
     },
   },
   typography: {
-    fontFamily: ['Old Standard TT', 'serif'].join(','),
+    fontFamily: ["Mukta Mahee", 'sans-serif'].join(','),
     h1: {
       fontWeight: 700,
       fontSize: 32,
@@ -75,11 +74,10 @@ export default function App() {
         component={'main'}
         sx={{ backgroundColor: theme.palette.common.white }}
       >
-        <Home />
+        <Hero />
         <AboutMe />
         <Projects />
         <Skills />
-        <Spotify />
         <Footer />
       </Grid>
     </ThemeProvider>

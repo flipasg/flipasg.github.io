@@ -11,7 +11,7 @@ export default function Footer() {
       textAlign={'center'}
       sx={{
         height: '200px',
-        backgroundColor: 'primary.main',
+        backgroundColor: 'background.paper',
         backgroundSize: '150px',
       }}
       width={'100%'}
@@ -20,7 +20,7 @@ export default function Footer() {
         <SocialLinks justifyButtons='center' />
         <Grid>
           <Box pl={2}>
-            <Typography variant='body1' color={'secondary'} fontSize={'medium'}>
+            <Typography variant='body1'  fontSize={'medium'}>
               @flipasg
             </Typography>
           </Box>

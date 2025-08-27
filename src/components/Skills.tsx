@@ -15,47 +15,34 @@ import CodeIcon from '@mui/icons-material/Code'
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
 import CloudIcon from '@mui/icons-material/Cloud'
 import DesignServicesIcon from '@mui/icons-material/DesignServices'
-import { useTheme, alpha } from '@mui/material/styles'
-
+import BuildIcon from '@mui/icons-material/Build'
+import ArchitectureIcon from '@mui/icons-material/Architecture'
 import { SKILLS, type SkillIconKey } from '@/data/skills'
 
-const ICONS: Record<SkillIconKey, React.ReactNode> = {
+const ICONS: Record<
+  SkillIconKey | 'infrastructure' | 'architecture',
+  React.ReactNode
+> = {
   ai: <PsychologyIcon />,
   frontend: <PublicIcon />,
   backend: <CodeIcon />,
   integrations: <IntegrationInstructionsIcon />,
   cloud: <CloudIcon />,
   tools: <DesignServicesIcon />,
-}
-
-const DESC: Record<string, string> = {
-  'AI & Dev Productivity':
-    'AI features and developer tooling that speed delivery.',
-  Frontend: 'Responsive, accessible UIs and geospatial data-viz.',
-  Backend: 'APIs and services focused on robustness and performance.',
-  'Integrations & Analytics':
-    'Product analytics, feature flags, and 3rd-party APIs.',
-  'Cloud & DevOps': 'CI/CD pipelines, containers, and cloud deployments.',
-  'Design & Tools': 'Prototyping and toolchains for fast iteration.',
+  infrastructure: <BuildIcon />,
+  architecture: <ArchitectureIcon />,
 }
 
 export default function Skills() {
-  const theme = useTheme()
-  const accent = theme.palette.secondary.main
-  const cardBg = alpha(theme.palette.background.default, 0.06)
-  const cardBorder = alpha(theme.palette.background.default, 0.1)
-  const chipBorder = alpha(theme.palette.background.default, 0.18)
-  const chipHover = alpha(theme.palette.secondary.main, 0.14)
-
   return (
     <Grid
       container
       component='section'
       direction='column'
       sx={{
-        backgroundColor: theme.palette.common.white,
         px: { xs: 2, sm: 4 },
         py: { xs: 6, sm: 8 },
+        backgroundColor: 'background.main',
       }}
       rowGap={4}
       justifyContent={'center'}
@@ -63,7 +50,7 @@ export default function Skills() {
       aria-labelledby='skills-heading'
     >
       <Box sx={{ maxWidth: 'md', mx: 'auto', width: '100%' }}>
-        <Typography variant='h2' color={'secondary'} fontSize={36} >
+        <Typography variant='h2' fontSize={36}>
           Skills
         </Typography>
       </Box>
@@ -79,15 +66,10 @@ export default function Skills() {
               elevation={0}
               sx={{
                 height: '100%',
-                backgroundColor: theme.palette.background.default,
-                border: `1px solid ${cardBorder}`,
+                backgroundColor: 'background.paper',
                 borderRadius: 2,
                 boxShadow: '0 10px 18px rgba(0,0,0,.35)',
                 transition: 'transform .18s ease, box-shadow .18s ease',
-                '&:hover': {
-                  transform: { sm: 'translateY(-4px)' },
-                  boxShadow: '0 14px 26px rgba(0,0,0,.45)',
-                },
               }}
             >
               <CardContent sx={{ p: { xs: 2.5, sm: 3 } }}>
@@ -96,8 +78,9 @@ export default function Skills() {
                     variant='rounded'
                     sx={{
                       bgcolor: 'transparent',
-                      color: accent,
-                      border: `2px solid ${accent}`,
+                      color: 'primary.main',
+                      border: '2px solid',
+                      borderColor: 'primary.main',
                       width: 48,
                       height: 48,
                     }}
@@ -108,30 +91,17 @@ export default function Skills() {
                     variant='h6'
                     sx={{
                       fontWeight: 800,
-                      color: theme.palette.secondary.main,
                       fontSize: { xs: 18, sm: 20 },
+                      color: 'text.primary',
                     }}
                   >
                     {cat.title}
                   </Typography>
                 </Stack>
 
-                <Typography
-                  variant='body1'
-                  sx={{
-                    color: theme.palette.text.secondary,
-                    opacity: 0.85,
-                    mb: 2,
-                    lineHeight: 1.65,
-                    fontSize: { xs: 14, sm: 16 },
-                  }}
-                >
-                  {DESC[cat.title] ?? 'Practical skills used in real projects.'}
-                </Typography>
-
                 <Divider
                   sx={{
-                    borderColor: alpha(theme.palette.text.secondary, 0.08),
+                    borderColor: 'background.main',
                     mb: 2,
                   }}
                 />
@@ -145,14 +115,9 @@ export default function Skills() {
                       sx={{
                         fontSize: { xs: 13, sm: 14 },
                         fontWeight: 600,
-                        color: theme.palette.common.white,
-                        borderColor: chipBorder,
-                        bgcolor: alpha(theme.palette.common.white, 0.04),
+                        borderColor: 'background.main',
+                        bgcolor: 'background.paper',
                         cursor: 'default',
-                        '&:hover': {
-                          borderColor: theme.palette.background.paper,
-                          bgcolor: theme.palette.background.paper,
-                        },
                       }}
                       variant='outlined'
                     />

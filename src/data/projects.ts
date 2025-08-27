@@ -1,52 +1,111 @@
 export type Project = {
   title: string
+  role: string // Add role field
+  company: string // Add company field
   period?: string
   description: string
   tech: string[]
   href?: string
   image?: string
-  role?: string // Add role field
 }
 
 export const PROJECTS: Project[] = [
   {
     title: 'Frenetic Simulator & AI',
-    period: '2023–2025',
-    description:
-      'Prototyped and delivered AI-driven features for a power electronics simulator; mentored onboarding; ensured scalable architecture.',
-    tech: ['TypeScript', 'React', 'AI tooling', 'Node'],
-  href: 'https://www.frenetic.ai/',
-  image: 'frenetic',
-  role: 'Frontend Engineer',
+    role: 'Full Stack Engineer',
+    company: 'Frenetic',
+    period: 'Sep 2024 – Present',
+    description: `At Frenetic, I designed and built AI-powered features for the Simulator and AI platform, while also mentoring junior developers to help them grow and feel confident in their work. I enjoyed leading rapid prototyping and experimentation to bring fresh product ideas to life, and focused on making sure our simulation tools stayed scalable and robust as we integrated advanced AI models.`,
+    tech: [
+      'Node.js',
+      'TypeScript',
+      'Express.js',
+      'Domain-Driven Design (DDD)',
+      'Prisma ORM',
+      'Vitest',
+      'Astro',
+      'Vue.js',
+      'Tailwind CSS',
+      'UX',
+      'Anthropic Claude',
+      'Open AI',
+      'GitHub Copilot',
+    ],
+    href: 'https://www.frenetic.ai/',
+    image: 'frenetic',
   },
   {
-    title: 'CARTO - GIS Applications',
+    title: 'CARTO',
+    role: 'Frontend Engineer',
+    company: 'CARTO',
     period: '2021–2023',
     description:
-      'Enterprise GIS web apps with responsive performance and reliable data viz across devices.',
-    tech: ['React', 'OpenLayers', 'Deck.gl', 'D3', 'GIS'],
-  href: 'https://example.com/carto',
-  image: 'portrait.jpg',
-  role: 'GIS Developer',
+      'At Carto, I scaled and maintained geospatial web applications to improve performance across devices, implemented responsive architectures that boosted product adoption, and collaborated closely with UX and backend teams to ensure reliable and meaningful data visualizations. I also delivered high-quality solutions tailored for enterprise-level GIS projects, helping the platform grow in both impact and usability.',
+    tech: [
+      'React',
+      'TypeScript',
+      'D3.js',
+      'SQL',
+      'JavaScript',
+      'Angular',
+      'GIS Applications',
+      'TypeScript',
+      'Material-UI',
+      'JavaScript',
+      'UX',
+      'Data Visualization',
+      'Performance',
+      'Jest',
+    ],
+    href: 'https://carto.com/',
+    image: 'carto',
   },
   {
     title: 'Landbot - AI Chatbot Generator',
+    role: 'Frontend Developer',
+    company: 'Landbot',
     period: '2021',
     description:
-      "Marketing, Sales, and Customer Service teams turn conversational experiences into revenue-driving outcomes with Landbot's AI Chatbot Generator.",
-    tech: ['React', 'Accessibility', 'Testing', 'UX'],
-  href: 'https://landbot.io/',
-  image: 'landbot',
-  role: 'UI/UX Engineer',
+      'At Landbot, I built and optimized conversational UI features that boosted user engagement, carried out UX research and turned feedback into tangible improvements, and maintained the core applications with a strong focus on accessibility. I also prototyped and tested new product ideas, helping the team identify and validate opportunities for growth.',
+    tech: [
+      'JavaScript',
+      'Product Development',
+      'Figma',
+      'TypeScript',
+      'Material-UI',
+      'Programming',
+      'JavaScript',
+      'CSS',
+      'Web Performance',
+      'React.js',
+      'React Query',
+      'Jest',
+      'UX'
+    ],
+    href: 'https://landbot.io/',
+    image: 'landbot',
   },
   {
     title: 'Geograma Public Sector GIS',
+    role: 'GIS Specialist',
+    company: 'Geograma',
     period: '2015–2021',
     description:
-      'Government/private GIS portals with scalable multi-device architectures and improved usability.',
-    tech: ['Java (Spring)', 'Leaflet', 'Three.js', 'D3'],
-  href: 'https://example.com/geograma',
-  image: 'skeched-portrait.jpg',
-  role: 'Full Stack Developer',
+      'At Geograma, I developed GIS web solutions for both government and private clients, designed technical architectures for scalable multi-device applications, and improved geospatial visualization tools to make them more usable and impactful. Working in cross-functional teams, I consistently delivered projects that created real value for clients.',
+    tech: [
+      'Angular',
+      'React.js',
+      'React Query',
+      'Leaflet',
+      'OpenLayers',
+      'GIS Applications',
+      'TypeScript',
+      'JavaScript',
+      'UX',
+      'Data Visualization',
+      'Web Performance',
+    ],
+    href: 'https://geograma.com/',
+    image: 'geograma',
   },
 ]

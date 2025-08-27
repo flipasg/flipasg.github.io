@@ -5,6 +5,8 @@ export type SkillIconKey =
   | 'integrations'
   | 'cloud'
   | 'tools'
+  | 'infrastructure'
+  | 'architecture'
 
 export type SkillCategory = {
   title: string
@@ -46,5 +48,29 @@ export const SKILLS: SkillCategory[] = [
     title: 'Design & Tools',
     icon: 'tools',
     items: ['Figma', 'Canva', 'VS Code'],
+  },
+  {
+    title: 'Infrastructure Patterns',
+    icon: 'infrastructure',
+    items: [
+      'Containerization',
+      'Database Management',
+      'CI/CD',
+      'Testing',
+      'Logging',
+      'Configuration Management',
+    ],
+  },
+  {
+    title: 'Architecture Patterns',
+    icon: 'architecture',
+    items: [
+      'Layered Architecture',
+      'Hexagonal Architecture',
+      'Microservices/Modular Monolith',
+      'Domain-Driven Design (DDD)',
+      'RESTful API',
+      '12-Factor App',
+    ],
   },
 ]

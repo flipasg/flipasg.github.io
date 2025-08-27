@@ -17,7 +17,7 @@ export default function AboutMe() {
       width={'100%'}
     >
       <Grid container direction={'column'} maxWidth={'md'} mb={2}>
-        <Typography variant='h2' color={'secondary'} fontSize={36} mb={2}>
+        <Typography variant='h2' fontSize={36} mb={2}>
           About me
         </Typography>
         <Typography variant='body1' color={'primary'}>
