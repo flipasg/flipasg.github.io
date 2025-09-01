@@ -10,11 +10,10 @@ export default function ActionButtons({
     <Grid
       container
       direction={'row'}
-      maxWidth={'md'}
+      width={{ xs: '100%', md: 'fit-content' }}
       my={2}
       gap={2}
-      ml={2}
-      justifyContent={justifyContent}
+      justifyContent={{ xs: 'center', sm: justifyContent }}
     >
       <Button
         component='a'

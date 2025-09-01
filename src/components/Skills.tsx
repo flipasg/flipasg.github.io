@@ -107,7 +107,7 @@ export default function Skills() {
 
                 <Divider
                   sx={{
-                    borderColor: 'background.main',
+                    borderColor: 'primary.main',
                     mb: 2,
                   }}
                 />
@@ -121,7 +121,7 @@ export default function Skills() {
                       sx={{
                         fontSize: { xs: 13, sm: 14 },
                         fontWeight: 600,
-                        borderColor: 'background.main',
+                        borderColor: 'primary.main',
                         bgcolor: 'background.paper',
                         cursor: 'default',
                       }}

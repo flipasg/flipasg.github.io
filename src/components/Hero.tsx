@@ -4,6 +4,7 @@ import { Avatar, Button, Typography, Divider } from '@mui/material'
 import { Box } from '@mui/system'
 import Grid from '@mui/material/Grid2'
 import SocialLinks from './SocialLinks'
+import ActionButtons from './ActionButtons'
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
       sx={{
         height: 'auto',
         backgroundColor: 'background.paper',
-        padding: { xs: 2, sm: 6 }, // Adjust padding for mobile
+        padding: { xs: 2, sm: 6 },
       }}
       component='section'
       width='100%'
@@ -21,15 +22,20 @@ export default function Hero() {
     >
       <Grid
         container
-        direction={{ xs: 'column', md: 'row' }}
         alignItems='center'
         width='100%'
         maxWidth='md'
+        justifyContent={'space-between'}
+        sx={{ flexDirection: { xs: 'column', sm: 'row' } }}
       >
-        <Grid direction='column' p={{ xs: 0, md: 0 }}>
+        <Grid direction='column' p={{ xs: 0, sm: 0 }}>
           <Grid>
             <Box>
-              <Typography variant='h1' fontSize={60} >
+              <Typography
+                variant='h1'
+                fontSize={60}
+                sx={{ textAlign: { xs: 'center', sm: 'start' } }}
+              >
                 Iker Garcia{' '}
                 <Typography
                   variant='h1'
@@ -40,12 +46,17 @@ export default function Hero() {
                   Ramirez
                 </Typography>
               </Typography>
-              <Typography variant='body1' fontSize={40} >
+              <Typography
+                variant='body1'
+                fontSize={40}
+                sx={{ textAlign: { xs: 'center', sm: 'start' } }}
+              >
                 Frontend Engineer
               </Typography>
             </Box>
           </Grid>
-          <SocialLinks ml={-1.5} />
+          <SocialLinks />
+          <ActionButtons />
         </Grid>
         <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
           <Avatar

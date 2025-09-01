@@ -42,6 +42,13 @@ function Tile({ p }: { p: Project }) {
           >
             {p.company}
           </Typography>
+          <Typography
+            variant='subtitle2'
+            sx={{ display: 'block', opacity: 0.7, mt: 0.5 }}
+            color='text.secondary'
+          >
+            {p.period}
+          </Typography>
         </Box>
         <Box sx={{ borderBottom: '0.5px solid', borderColor: 'background.paper', my: 1 }} />
 
@@ -63,7 +70,7 @@ function Tile({ p }: { p: Project }) {
                 size='small'
                 sx={{
                   bgcolor: 'rgba(255,255,255,.15)',
-                  color: 'common.white',
+                  color: 'secondary.main',
                   fontWeight: 600,
                 }}
               />

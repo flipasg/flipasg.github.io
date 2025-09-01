@@ -1,6 +1,7 @@
-import { Box, Typography } from '@mui/material';
-import SocialLinks from './SocialLinks';
-import Grid from '@mui/material/Grid2';
+import { Box, Typography } from '@mui/material'
+import SocialLinks from './SocialLinks'
+import Grid from '@mui/material/Grid2'
+import ActionButtons from './ActionButtons'
 
 export default function Footer() {
   return (
@@ -14,21 +15,28 @@ export default function Footer() {
         height: '200px',
         backgroundColor: 'primary.main',
         color: 'secondary.main',
-        backgroundSize: '150px',
-        padding: { xs: 0, sm: 2 }, // Adjust padding for mobile
+        padding: { xs: 0, sm: 2 },
       }}
       width='100%'
     >
-      <Box px={4}>
-        <SocialLinks justifyButtons='center' color='secondary' />
+      <Grid
+        container
+        direction='column'
+        px={4}
+        width={'fit-content'}
+        alignItems={'center'}
+        justifyContent={'center'}
+      >
+        <SocialLinks color='secondary' justifyContent='center' />
+        <ActionButtons  color='secondary' justifyContent='center' />
         <Grid>
-          <Box pl={2}>
+          <Box>
             <Typography variant='body1' fontSize='medium' color='secondary'>
               @flipasg
             </Typography>
           </Box>
         </Grid>
-      </Box>
+      </Grid>
     </Grid>
-  );
+  )
 }
