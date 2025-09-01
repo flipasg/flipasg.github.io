@@ -39,7 +39,7 @@ export default function AboutMe() {
             mb: 3,
           }}
         />
-        <Grid container px={{ xs: 2, sm: 0 }}>
+        <Grid container px={{ xs: 2, md: 0 }}>
           <Typography variant='body1' color='primary'>
             I love challenges, technology and learning. I like to be part of the
             process of creating and evolving a project.
