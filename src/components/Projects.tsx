@@ -8,7 +8,7 @@ function Tile({ p }: { p: Project }) {
       component='article'
       sx={{
         position: 'relative',
-        height: 'auto', // Adjust height to fit content
+        height: 'auto',
         borderRadius: 2,
         overflow: 'hidden',
         boxShadow: '0 12px 36px rgba(0,0,0,.45)',

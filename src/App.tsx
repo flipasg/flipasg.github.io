@@ -1,10 +1,11 @@
 import Hero from '@/components/Hero'
-import { Box, createTheme, CssBaseline, ThemeProvider } from '@mui/material'
-import Footer from './components/Footer'
-import AboutMe from './components/AboutMe'
-import Skills from './components/Skills'
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import Grid from '@mui/material/Grid2'
+import AboutMe from './components/AboutMe'
+import Blog from './components/Blog'
+import Footer from './components/Footer'
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 
 const theme = createTheme({
   palette: {
@@ -27,7 +28,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Mukta Mahee", 'sans-serif'].join(','),
+    fontFamily: ['Mukta Mahee', 'sans-serif'].join(','),
     h1: {
       fontWeight: 700,
       fontSize: 32,
@@ -83,6 +84,7 @@ export default function App() {
         <AboutMe />
         <Projects />
         <Skills />
+        <Blog />
         <Footer />
       </Grid>
     </ThemeProvider>
