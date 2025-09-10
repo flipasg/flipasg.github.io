@@ -1,10 +1,9 @@
-import Image from '@/assets/stars.png'
-import Portrait from '@/assets/skeched-portrait.jpg'
-import { Avatar, Button, Typography, Divider } from '@mui/material'
-import { Box } from '@mui/system'
+import Logo from '@/assets/logo-primary.png'
+import { Avatar, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2'
-import SocialLinks from './SocialLinks'
+import { Box } from '@mui/system'
 import ActionButtons from './ActionButtons'
+import SocialLinks from './SocialLinks'
 
 export default function Hero() {
   return (
@@ -61,8 +60,9 @@ export default function Hero() {
         <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
           <Avatar
             alt='Iker Garcia'
-            src={Portrait}
+            src={Logo}
             sx={{ width: 200, height: 200 }}
+            slotProps={{ img: { sx: { objectFit: 'contain' } } }}
           />
         </Grid>
       </Grid>

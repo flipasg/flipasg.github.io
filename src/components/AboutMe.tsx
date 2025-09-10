@@ -1,5 +1,4 @@
-import { Button, Typography, Divider } from '@mui/material'
-import Pdf from '@/assets/IkerGarcia_CV.pdf'
+import { Divider, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2'
 
 export default function AboutMe() {
@@ -13,7 +12,7 @@ export default function AboutMe() {
       sx={{
         backgroundColor: 'common.white',
         px: { xs: 0 },
-        py: { xs: 4, sm: 6 }
+        py: { xs: 4, sm: 6 },
       }}
       mt={6}
       width='100%'
