@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero'
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
-import Grid from '@mui/material/Grid2'
+import Grid from '@mui/material/Grid'
 import AboutMe from './components/AboutMe'
 import Blog from './components/Blog'
 import Footer from './components/Footer'

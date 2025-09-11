@@ -18,15 +18,32 @@ export const SKILLS: SkillCategory[] = [
   {
     title: 'AI & Dev Productivity',
     icon: 'ai',
-    items: ['Prompt engineering', 'Langfuse', 'GitHub Copilot', 'ChatGPT', 'Claude'],
+    items: [
+      'Prompt engineering',
+      'Langfuse',
+      'GitHub Copilot',
+      'ChatGPT',
+      'Claude',
+    ],
   },
   {
     title: 'Frontend',
     icon: 'frontend',
     items: [
-      'TypeScript', 'React', 'Vue', 'Angular', 'Astro',
-      'OpenLayers', 'Leaflet', 'Deck.gl', 'Three.js', 'D3',
-      'Tailwind (v2/v3)', 'Storybook', 'Jest', 'Vitest',
+      'TypeScript',
+      'React',
+      'Vue',
+      'Angular',
+      'Astro',
+      'OpenLayers',
+      'Leaflet',
+      'Deck.gl',
+      'Three.js',
+      'D3',
+      'Tailwind (v2/v3)',
+      'Storybook',
+      'Jest',
+      'Vitest',
     ],
   },
   {
@@ -42,7 +59,14 @@ export const SKILLS: SkillCategory[] = [
   {
     title: 'Cloud & DevOps',
     icon: 'cloud',
-    items: ['Git', 'Docker', 'AWS', 'Google Cloud', 'Semantic Release', 'Npm/Nvm/Yarn'],
+    items: [
+      'Git',
+      'Docker',
+      'AWS',
+      'Google Cloud',
+      'Semantic Release',
+      'Npm/Nvm/Yarn',
+    ],
   },
   {
     title: 'Design & Tools',

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
-import SocialLinks from './SocialLinks'
-import Grid from '@mui/material/Grid2'
+import Grid from '@mui/material/Grid'
 import ActionButtons from './ActionButtons'
+import SocialLinks from './SocialLinks'
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
         justifyContent={'center'}
       >
         <SocialLinks color='secondary' justifyContent='center' />
-        <ActionButtons  color='secondary' justifyContent='center' />
+        <ActionButtons color='secondary' justifyContent='center' />
         <Grid>
           <Box>
             <Typography variant='body1' fontSize='medium' color='secondary'>

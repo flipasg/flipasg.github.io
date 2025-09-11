@@ -1,23 +1,22 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Chip,
-  Stack,
-  Avatar,
-  Divider,
-} from '@mui/material'
-import Grid from '@mui/material/Grid2'
+import { SKILLS, type SkillIconKey } from '@/data/skills'
+import ArchitectureIcon from '@mui/icons-material/Architecture'
+import BuildIcon from '@mui/icons-material/Build'
+import CloudIcon from '@mui/icons-material/Cloud'
+import CodeIcon from '@mui/icons-material/Code'
+import DesignServicesIcon from '@mui/icons-material/DesignServices'
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
 import PsychologyIcon from '@mui/icons-material/Psychology'
 import PublicIcon from '@mui/icons-material/Public'
-import CodeIcon from '@mui/icons-material/Code'
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions'
-import CloudIcon from '@mui/icons-material/Cloud'
-import DesignServicesIcon from '@mui/icons-material/DesignServices'
-import BuildIcon from '@mui/icons-material/Build'
-import ArchitectureIcon from '@mui/icons-material/Architecture'
-import { SKILLS, type SkillIconKey } from '@/data/skills'
+import {
+  Avatar,
+  Card,
+  CardContent,
+  Chip,
+  Divider,
+  Stack,
+  Typography,
+} from '@mui/material'
+import Grid from '@mui/material/Grid'
 
 const ICONS: Record<
   SkillIconKey | 'infrastructure' | 'architecture',
@@ -113,9 +112,9 @@ export default function Skills() {
                 />
 
                 <Stack direction='row' useFlexGap flexWrap='wrap' gap={1}>
-                  {cat.items.map((s) => (
+                  {cat.items.map((s, i) => (
                     <Chip
-                      key={s}
+                      key={`${cat.title}-${s}-${i}`}
                       label={s}
                       size='medium'
                       sx={{

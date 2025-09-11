@@ -1,6 +1,6 @@
-import Grid from '@mui/material/Grid2'
-import { Box, Typography, Chip, Stack } from '@mui/material'
 import { PROJECTS, type Project } from '@/data/projects'
+import { Box, Chip, Stack, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid'
 
 function Tile({ p }: { p: Project }) {
   return (
@@ -50,7 +50,13 @@ function Tile({ p }: { p: Project }) {
             {p.period}
           </Typography>
         </Box>
-        <Box sx={{ borderBottom: '0.5px solid', borderColor: 'background.paper', my: 1 }} />
+        <Box
+          sx={{
+            borderBottom: '0.5px solid',
+            borderColor: 'background.paper',
+            my: 1,
+          }}
+        />
 
         <Box>
           <Typography
@@ -63,9 +69,9 @@ function Tile({ p }: { p: Project }) {
 
         <Box>
           <Stack direction='row' flexWrap='wrap' gap={1} sx={{ mt: 2 }}>
-            {p.tech.map((t) => (
+            {p.tech.map((t, i) => (
               <Chip
-                key={t}
+                key={`${p.title}-${t}-${i}`}
                 label={t}
                 size='small'
                 sx={{
@@ -108,11 +114,7 @@ export default function Projects() {
         }}
       />
 
-      <Grid
-        container
-        spacing={2}
-        sx={{ px: 2, maxWidth: 'xl', width: '100%' }}
-      >
+      <Grid container spacing={2} sx={{ px: 2, maxWidth: 'xl', width: '100%' }}>
         {PROJECTS.map((p) => (
           <Grid key={p.title} size={{ xs: 12, sm: 6, md: 6 }}>
             <Tile p={p} />

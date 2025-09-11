@@ -1,6 +1,6 @@
 import Logo from '@/assets/logo-primary.png'
 import { Avatar, Typography } from '@mui/material'
-import Grid from '@mui/material/Grid2'
+import Grid from '@mui/material/Grid'
 import { Box } from '@mui/system'
 import ActionButtons from './ActionButtons'
 import SocialLinks from './SocialLinks'

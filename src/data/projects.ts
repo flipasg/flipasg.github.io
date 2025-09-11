@@ -1,7 +1,7 @@
 export type Project = {
   title: string
-  role: string // Add role field
-  company: string // Add company field
+  role: string
+  company: string
   period?: string
   description: string
   tech: string[]
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
       'React.js',
       'React Query',
       'Jest',
-      'UX'
+      'UX',
     ],
     href: 'https://landbot.io/',
     image: 'landbot',

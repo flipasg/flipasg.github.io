@@ -1,13 +1,10 @@
 import BookIcon from '@mui/icons-material/Book'
-import FacebookIcon from '@mui/icons-material/Facebook'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PinterestIcon from '@mui/icons-material/Pinterest'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import { List, ListItem, ListItemIcon, Stack, SvgIcon } from '@mui/material'
-import Grid from '@mui/material/Grid2'
-import ActionButtons from './ActionButtons'
 
 const SOCIAL_LINKS = [
   {
@@ -44,7 +41,7 @@ const SOCIAL_LINKS = [
 export default function SocialLinks({
   color = 'primary',
   justifyContent = 'flex-start',
-}: Partial<{ color: any; justifyContent: string; }>) {
+}: Partial<{ color: any; justifyContent: string }>) {
   return (
     <List
       component={Stack}

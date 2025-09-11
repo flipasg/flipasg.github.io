@@ -4,11 +4,10 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
-  Container,
   Typography,
 } from '@mui/material'
+import Grid from '@mui/material/Grid'
 import { posts } from '../data/posts'
-import Grid from '@mui/material/Grid2'
 
 export default function Blog() {
   return (
@@ -53,6 +52,7 @@ export default function Blog() {
       >
         {posts.map((post) => (
           <Card
+            key={post.id}
             elevation={3}
             sx={{ height: '275px', backgroundColor: 'common.white' }}
           >
