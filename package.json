@@ -15,7 +15,9 @@
     "hygen": "hygen",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
