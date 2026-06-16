@@ -4,79 +4,84 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PinterestIcon from '@mui/icons-material/Pinterest'
 import TwitterIcon from '@mui/icons-material/Twitter'
-import { List, ListItem, ListItemIcon, Stack, SvgIcon } from '@mui/material'
+import { IconButton, Stack, SvgIcon } from '@mui/material'
+import type { IconButtonProps } from '@mui/material'
 
 const SOCIAL_LINKS = [
   {
     key: 'linkedin',
+    label: 'LinkedIn profile',
     href: 'https://linkedin.com/in/iker-garcia',
     icon: LinkedInIcon,
   },
   {
     key: 'blog',
+    label: 'Silencio en la Sala blog',
     href: 'https://silencioenlasala.com',
     icon: BookIcon,
   },
   {
     key: 'twitter',
+    label: 'Twitter profile',
     href: 'https://twitter.com/flipasg',
     icon: TwitterIcon,
   },
   {
     key: 'github',
+    label: 'GitHub profile',
     href: 'https://github.com/flipasg',
     icon: GitHubIcon,
   },
   {
     key: 'instagram',
+    label: 'Instagram profile',
     href: 'https://instagram.com/flipasg',
     icon: InstagramIcon,
   },
   {
     key: 'pinterest',
+    label: 'Pinterest profile',
     href: 'https://pinterest.com/flipasgarcia',
     icon: PinterestIcon,
   },
 ]
+
 export default function SocialLinks({
   color = 'primary',
   justifyContent = 'flex-start',
-}: Partial<{ color: any; justifyContent: string }>) {
+}: Partial<{ color: IconButtonProps['color']; justifyContent: string }>) {
   return (
-    <List
-      component={Stack}
+    <Stack
+      component='nav'
+      aria-label='Social links'
       direction='row'
+      useFlexGap
+      flexWrap='wrap'
+      gap={0.5}
       sx={{
         width: { xs: '100%', sm: 'fit-content' },
-        justifyContent: { xs: 'center' },
+        justifyContent: { xs: 'center', sm: justifyContent },
         alignItems: 'center',
       }}
     >
-      {SOCIAL_LINKS.map(({ key, href, icon }) => (
-        <ListItem
+      {SOCIAL_LINKS.map(({ key, label, href, icon }) => (
+        <IconButton
           key={key}
           component='a'
+          aria-label={label}
           target='_blank'
+          rel='noreferrer'
           href={href}
+          color={color}
           sx={{
-            width: { xs: '100%', sm: 'auto' },
-            display: 'flex',
-            justifyContent: { xs: 'center', md: 'flex-start' },
-            alignItems: 'center',
+            border: '1px solid',
+            borderColor:
+              color === 'secondary' ? 'secondary.main' : 'primary.main',
           }}
-          disablePadding
         >
-          <ListItemIcon
-            sx={{
-              justifyContent: { xs: 'center', md: justifyContent },
-              alignItems: { xs: 'center' },
-              mx: { xs: 'auto', md: 0 },
-            }}
-          >
-            <SvgIcon component={icon} color={color} />
-          </ListItemIcon>
-        </ListItem>
+          <SvgIcon component={icon} />
+        </IconButton>
       ))}
-    </List>
+    </Stack>
   )
 }

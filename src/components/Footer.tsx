@@ -12,17 +12,18 @@ export default function Footer() {
       alignItems='center'
       textAlign='center'
       sx={{
-        height: '200px',
+        minHeight: 220,
         backgroundColor: 'primary.main',
         color: 'secondary.main',
-        padding: { xs: 0, sm: 2 },
+        px: { xs: 2, sm: 4 },
+        py: { xs: 4, sm: 5 },
       }}
       width='100%'
     >
       <Grid
         container
         direction='column'
-        px={4}
+        px={{ xs: 0, sm: 4 }}
         width={'fit-content'}
         alignItems={'center'}
         justifyContent={'center'}

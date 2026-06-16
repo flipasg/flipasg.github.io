@@ -41,7 +41,8 @@ export default function Skills() {
       alignItems='center'
       justifyContent={'center'}
       sx={{
-        py: { xs: 4, sm: 6 },
+        px: { xs: 2, sm: 4 },
+        py: { xs: 5, sm: 7, md: 9 },
       }}
       width={'100%'}
     >
@@ -63,17 +64,17 @@ export default function Skills() {
       <Grid
         container
         spacing={3}
-        sx={{ maxWidth: 'md', mx: 'auto', width: '100%', px: { xs: 2 } }}
+        sx={{ maxWidth: 'lg', mx: 'auto', width: '100%' }}
       >
         {SKILLS.map((cat) => (
-          <Grid key={cat.title} size={{ xs: 12, sm: 6 }}>
+          <Grid key={cat.title} size={{ xs: 12, sm: 6, md: 4 }}>
             <Card
               elevation={0}
               sx={{
                 height: '100%',
                 backgroundColor: 'background.paper',
                 borderRadius: 2,
-                boxShadow: '0 10px 18px rgba(0,0,0,.35)',
+                boxShadow: '0 10px 28px rgba(0, 34, 78, 0.14)',
                 transition: 'transform .18s ease, box-shadow .18s ease',
               }}
             >

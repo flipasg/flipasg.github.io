@@ -1,6 +1,5 @@
 import Hero from '@/components/Hero'
-import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
-import Grid from '@mui/material/Grid'
+import { Box, createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import AboutMe from './components/AboutMe'
 import Blog from './components/Blog'
 import Footer from './components/Footer'
@@ -30,8 +29,10 @@ const theme = createTheme({
   typography: {
     fontFamily: ['Mukta Mahee', 'sans-serif'].join(','),
     h1: {
-      fontWeight: 700,
-      fontSize: 32,
+      fontWeight: 800,
+      fontSize: 'clamp(2.5rem, 13vw, 4.75rem)',
+      lineHeight: 0.95,
+      letterSpacing: '-0.04em',
     },
     h2: {
       fontWeight: 700,
@@ -53,6 +54,7 @@ const theme = createTheme({
     },
     body1: {
       fontSize: 18,
+      lineHeight: 1.7,
     },
   },
   breakpoints: {
@@ -70,9 +72,8 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Grid
-        container
-        component={'main'}
+      <Box
+        component='main'
         sx={{
           backgroundColor: theme.palette.common.white,
           width: '100%',
@@ -86,7 +87,7 @@ export default function App() {
         <Skills />
         <Blog />
         <Footer />
-      </Grid>
+      </Box>
     </ThemeProvider>
   )
 }

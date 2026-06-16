@@ -9,8 +9,8 @@ export default function ActionButtons({
   return (
     <Grid
       container
-      direction={'row'}
-      width={{ xs: '100%', md: 'fit-content' }}
+      direction={{ xs: 'column', sm: 'row' }}
+      width={{ xs: '100%', sm: 'fit-content' }}
       my={2}
       gap={2}
       justifyContent={{ xs: 'center', sm: justifyContent }}
@@ -21,6 +21,7 @@ export default function ActionButtons({
         href={Pdf}
         target='_blank'
         variant='outlined'
+        sx={{ minHeight: 44 }}
       >
         Download CV
       </Button>
@@ -31,6 +32,7 @@ export default function ActionButtons({
         href='mailto:ikergarciadev@gmail.com'
         target='_blank'
         rel='noreferrer'
+        sx={{ minHeight: 44 }}
       >
         Email me
       </Button>

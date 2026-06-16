@@ -11,16 +11,16 @@ export default function AboutMe() {
       alignItems='center'
       sx={{
         backgroundColor: 'common.white',
-        px: { xs: 0 },
-        py: { xs: 4, sm: 6 },
+        px: { xs: 2, sm: 4 },
+        py: { xs: 5, sm: 7, md: 9 },
       }}
-      mt={6}
       width='100%'
     >
       <Grid
         container
         direction='column'
         maxWidth='md'
+        width='100%'
         mb={2}
         alignItems='center'
       >
@@ -38,7 +38,7 @@ export default function AboutMe() {
             mb: 3,
           }}
         />
-        <Grid container px={{ xs: 2, md: 0 }}>
+        <Grid container direction='column' gap={2}>
           <Typography variant='body1' color='primary'>
             I love challenges, technology and learning. I like to be part of the
             process of creating and evolving a project.

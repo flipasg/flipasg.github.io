@@ -1,7 +1,6 @@
 import Logo from '@/assets/logo-primary.png'
-import { Avatar, Typography } from '@mui/material'
+import { Avatar, Box, Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
-import { Box } from '@mui/system'
 import ActionButtons from './ActionButtons'
 import SocialLinks from './SocialLinks'
 
@@ -9,12 +8,14 @@ export default function Hero() {
   return (
     <Grid
       container
-      sx={{
-        height: 'auto',
-        backgroundColor: 'background.paper',
-        padding: { xs: 2, sm: 6 },
-      }}
       component='section'
+      sx={{
+        background:
+          'linear-gradient(135deg, #c6d9ff 0%, #eef4ff 55%, #fbfbfb 100%)',
+        px: { xs: 2, sm: 4, md: 6 },
+        py: { xs: 6, sm: 8, md: 10 },
+        minHeight: { xs: 'auto', md: '78vh' },
+      }}
       width='100%'
       justifyContent='center'
       alignItems='center'
@@ -23,45 +24,63 @@ export default function Hero() {
         container
         alignItems='center'
         width='100%'
-        maxWidth='md'
-        justifyContent={'space-between'}
-        sx={{ flexDirection: { xs: 'column', sm: 'row' } }}
+        maxWidth='lg'
+        spacing={{ xs: 4, md: 8 }}
+        sx={{ flexDirection: { xs: 'column-reverse', md: 'row' } }}
       >
-        <Grid direction='column' p={{ xs: 0, sm: 0 }}>
-          <Grid>
+        <Grid size={{ xs: 12, md: 7 }}>
+          <Stack
+            component='header'
+            spacing={2}
+            alignItems={{ xs: 'center', md: 'flex-start' }}
+            textAlign={{ xs: 'center', md: 'left' }}
+          >
+            <Typography
+              variant='overline'
+              color='primary'
+              sx={{ fontWeight: 800, letterSpacing: 2 }}
+            >
+              Portfolio · Frontend · AI products
+            </Typography>
             <Box>
+              <Typography variant='h1'>Iker Garcia</Typography>
               <Typography
                 variant='h1'
-                fontSize={60}
-                sx={{ textAlign: { xs: 'center', sm: 'start' } }}
+                component='span'
+                sx={{ display: { xs: 'none', sm: 'block' } }}
               >
-                Iker Garcia{' '}
-                <Typography
-                  variant='h1'
-                  fontSize={60}
-                  component='span'
-                  sx={{ display: { xs: 'none', sm: 'inline-block' } }}
-                >
-                  Ramirez
-                </Typography>
-              </Typography>
-              <Typography
-                variant='body1'
-                fontSize={40}
-                sx={{ textAlign: { xs: 'center', sm: 'start' } }}
-              >
-                Frontend Engineer
+                Ramirez
               </Typography>
             </Box>
-          </Grid>
-          <SocialLinks />
-          <ActionButtons />
+            <Typography
+              variant='h2'
+              color='primary'
+              sx={{
+                fontSize: { xs: 28, sm: 36, md: 44 },
+                lineHeight: 1.15,
+                maxWidth: 640,
+              }}
+            >
+              Frontend Engineer building responsive, accessible web products.
+            </Typography>
+            <SocialLinks />
+            <ActionButtons />
+          </Stack>
         </Grid>
-        <Grid sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Grid
+          size={{ xs: 12, md: 5 }}
+          sx={{ display: 'flex', justifyContent: 'center' }}
+        >
           <Avatar
             alt='Iker Garcia'
             src={Logo}
-            sx={{ width: 200, height: 200 }}
+            sx={{
+              width: { xs: 144, sm: 180, md: 240 },
+              height: { xs: 144, sm: 180, md: 240 },
+              bgcolor: 'common.white',
+              boxShadow: '0 24px 60px rgba(0, 34, 78, 0.25)',
+              p: { xs: 2, md: 3 },
+            }}
             slotProps={{ img: { sx: { objectFit: 'contain' } } }}
           />
         </Grid>

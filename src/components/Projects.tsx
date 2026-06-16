@@ -11,10 +11,10 @@ function Tile({ p }: { p: Project }) {
         height: 'auto',
         borderRadius: 2,
         overflow: 'hidden',
-        boxShadow: '0 12px 36px rgba(0,0,0,.45)',
+        boxShadow: '0 10px 28px rgba(0, 34, 78, 0.2)',
         bgcolor: 'primary.main',
         '&:hover': {
-          boxShadow: '0 16px 48px rgba(0,0,0,.6)',
+          boxShadow: '0 16px 44px rgba(0, 34, 78, 0.32)',
         },
       }}
     >
@@ -24,13 +24,17 @@ function Tile({ p }: { p: Project }) {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          p: 3,
+          p: { xs: 2.5, sm: 3 },
         }}
       >
         <Box>
           <Typography
             variant='h4'
-            sx={{ fontWeight: 800, mt: 1 }}
+            sx={{
+              fontWeight: 800,
+              mt: 1,
+              fontSize: { xs: 24, sm: 28, md: 32 },
+            }}
             color='text.secondary'
           >
             {p.role}
@@ -95,11 +99,15 @@ export default function Projects() {
       component='section'
       direction='column'
       alignItems='center'
-      sx={{ backgroundColor: 'background.main', py: { xs: 4, sm: 6 } }}
+      sx={{
+        backgroundColor: 'background.default',
+        px: { xs: 2, sm: 4 },
+        py: { xs: 5, sm: 7, md: 9 },
+      }}
       gap={3}
       width='100%'
     >
-      <Typography variant='h4' sx={{ px: 2 }}>
+      <Typography variant='h2' fontSize={36} textAlign='center'>
         Work Experience
       </Typography>
       <Box
@@ -114,7 +122,7 @@ export default function Projects() {
         }}
       />
 
-      <Grid container spacing={2} sx={{ px: 2, maxWidth: 'xl', width: '100%' }}>
+      <Grid container spacing={2.5} sx={{ maxWidth: 'lg', width: '100%' }}>
         {PROJECTS.map((p) => (
           <Grid key={p.title} size={{ xs: 12, sm: 6, md: 6 }}>
             <Tile p={p} />

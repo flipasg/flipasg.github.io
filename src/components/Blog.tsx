@@ -16,11 +16,15 @@ export default function Blog() {
       component='section'
       direction='column'
       alignItems='center'
-      sx={{ backgroundColor: 'background.main', py: { xs: 4, sm: 6 } }}
+      sx={{
+        backgroundColor: 'background.default',
+        px: { xs: 2, sm: 4 },
+        py: { xs: 5, sm: 7, md: 9 },
+      }}
       gap={3}
       width='100%'
     >
-      <Typography variant='h4' sx={{ px: 2 }}>
+      <Typography variant='h2' fontSize={36} textAlign='center'>
         Silencio en la Sala
       </Typography>
       <Box
@@ -35,7 +39,7 @@ export default function Blog() {
         }}
       />
 
-      <Grid container direction='column' maxWidth='md' px={{ xs: 2, md: 0 }}>
+      <Grid container direction='column' maxWidth='md'>
         <Typography variant='body1' color='primary'>
           A personal space where I publish poems, haikus, micro-stories, and
           literary experiments. It’s a creative playground where words are
@@ -48,19 +52,23 @@ export default function Blog() {
         spacing={3}
         justifyContent='center'
         alignItems='center'
-        sx={{ px: 2, maxWidth: 'xl', width: '100%' }}
+        sx={{ maxWidth: 'lg', width: '100%' }}
       >
         {posts.map((post) => (
           <Card
             key={post.id}
             elevation={3}
-            sx={{ height: '275px', backgroundColor: 'common.white' }}
+            sx={{
+              width: { xs: '100%', sm: 280 },
+              height: '100%',
+              backgroundColor: 'common.white',
+            }}
           >
             <CardActionArea
               component='a'
               href={post.href}
               target='_blank'
-              sx={{ p: 2 }}
+              sx={{ p: 2, height: '100%' }}
             >
               <CardMedia
                 component='img'
