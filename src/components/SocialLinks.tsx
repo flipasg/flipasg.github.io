@@ -4,7 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PinterestIcon from '@mui/icons-material/Pinterest'
 import TwitterIcon from '@mui/icons-material/Twitter'
-import { IconButton, Stack, SvgIcon } from '@mui/material'
+import { IconButton, Stack, SvgIcon, Tooltip } from '@mui/material'
 import type { IconButtonProps } from '@mui/material'
 
 const SOCIAL_LINKS = [
@@ -65,22 +65,39 @@ export default function SocialLinks({
       }}
     >
       {SOCIAL_LINKS.map(({ key, label, href, icon }) => (
-        <IconButton
-          key={key}
-          component='a'
-          aria-label={label}
-          target='_blank'
-          rel='noreferrer'
-          href={href}
-          color={color}
-          sx={{
-            border: '1px solid',
-            borderColor:
-              color === 'secondary' ? 'secondary.main' : 'primary.main',
-          }}
-        >
-          <SvgIcon component={icon} />
-        </IconButton>
+        <Tooltip key={key} title={label} arrow>
+          <IconButton
+            component='a'
+            aria-label={label}
+            target='_blank'
+            rel='noreferrer'
+            href={href}
+            color={color}
+            sx={{
+              border: '1px solid',
+              borderColor:
+                color === 'secondary' ? 'secondary.main' : 'primary.main',
+              height: 44,
+              transition:
+                'transform 180ms ease, background-color 180ms ease, border-color 180ms ease',
+              width: 44,
+              '&:hover': {
+                bgcolor:
+                  color === 'secondary'
+                    ? 'rgba(198, 217, 255, 0.12)'
+                    : 'rgba(85, 119, 104, 0.12)',
+                transform: 'translateY(-2px)',
+              },
+              '&.Mui-focusVisible': {
+                outline: '3px solid',
+                outlineColor: 'warning.main',
+                outlineOffset: 3,
+              },
+            }}
+          >
+            <SvgIcon component={icon} fontSize='small' />
+          </IconButton>
+        </Tooltip>
       ))}
     </Stack>
   )

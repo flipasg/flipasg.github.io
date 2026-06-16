@@ -11,7 +11,7 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    title: 'COTESA GIS Solutions',
+    title: 'COTESA - Consultancy, solutions and innovative services',
     role: 'Full Stack Engineer',
     company: 'COTESA',
     period: 'Oct 2025 – Present',
@@ -28,6 +28,7 @@ export const PROJECTS: Project[] = [
       'Data Visualization',
       'Accessibility',
     ],
+    href: 'https://cotesa.com.es/',
     image: 'cotesa',
   },
   {
@@ -55,7 +56,7 @@ export const PROJECTS: Project[] = [
     image: 'frenetic',
   },
   {
-    title: 'CARTO',
+    title: 'CARTO - The Agentic GIS Platform',
     role: 'Frontend Engineer',
     company: 'CARTO',
     period: 'Dec 2021 – May 2023',
@@ -106,7 +107,7 @@ export const PROJECTS: Project[] = [
     image: 'landbot',
   },
   {
-    title: 'Geograma Public Sector GIS',
+    title: 'geograma - GIS y Location Intelligence',
     role: 'Software Engineer',
     company: 'Geograma',
     period: 'Jun 2015 – Apr 2021',

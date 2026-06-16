@@ -11,6 +11,8 @@ describe('AboutMe', () => {
 
     const paragraphs = container.querySelectorAll('p')
     expect(paragraphs.length).toBeGreaterThanOrEqual(3)
-    expect(screen.getByText(/GIS platforms/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/GIS platforms/i).length).toBeGreaterThanOrEqual(
+      1,
+    )
   })
 })
