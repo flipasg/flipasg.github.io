@@ -101,7 +101,7 @@ export default function Projects() {
       alignItems='center'
       sx={{
         backgroundColor: 'background.default',
-        px: { xs: 2, sm: 4 },
+        px: { xs: 2, sm: 4, md: 6, lg: 8 },
         py: { xs: 5, sm: 7, md: 9 },
       }}
       gap={3}
@@ -113,7 +113,7 @@ export default function Projects() {
       <Box
         sx={{
           width: '100%',
-          maxWidth: 'md',
+          maxWidth: 'xl',
           mx: 'auto',
           height: 2,
           bgcolor: 'primary.main',
@@ -122,7 +122,7 @@ export default function Projects() {
         }}
       />
 
-      <Grid container spacing={2.5} sx={{ maxWidth: 'lg', width: '100%' }}>
+      <Grid container spacing={2.5} sx={{ maxWidth: 'xl', width: '100%' }}>
         {PROJECTS.map((p) => (
           <Grid key={p.title} size={{ xs: 12, sm: 6, md: 6 }}>
             <Tile p={p} />

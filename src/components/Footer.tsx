@@ -15,7 +15,7 @@ export default function Footer() {
         minHeight: 220,
         backgroundColor: 'primary.main',
         color: 'secondary.main',
-        px: { xs: 2, sm: 4 },
+        px: { xs: 2, sm: 4, md: 6, lg: 8 },
         py: { xs: 4, sm: 5 },
       }}
       width='100%'
@@ -24,7 +24,8 @@ export default function Footer() {
         container
         direction='column'
         px={{ xs: 0, sm: 4 }}
-        width={'fit-content'}
+        maxWidth='xl'
+        width='100%'
         alignItems={'center'}
         justifyContent={'center'}
       >

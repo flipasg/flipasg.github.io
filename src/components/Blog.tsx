@@ -18,7 +18,7 @@ export default function Blog() {
       alignItems='center'
       sx={{
         backgroundColor: 'background.default',
-        px: { xs: 2, sm: 4 },
+        px: { xs: 2, sm: 4, md: 6, lg: 8 },
         py: { xs: 5, sm: 7, md: 9 },
       }}
       gap={3}
@@ -30,7 +30,7 @@ export default function Blog() {
       <Box
         sx={{
           width: '100%',
-          maxWidth: 'md',
+          maxWidth: 'xl',
           mx: 'auto',
           height: 2,
           bgcolor: 'primary.main',
@@ -39,7 +39,7 @@ export default function Blog() {
         }}
       />
 
-      <Grid container direction='column' maxWidth='md'>
+      <Grid container direction='column' maxWidth='lg'>
         <Typography variant='body1' color='primary'>
           A personal space where I publish poems, haikus, micro-stories, and
           literary experiments. It’s a creative playground where words are
@@ -51,45 +51,45 @@ export default function Blog() {
         container
         spacing={3}
         justifyContent='center'
-        alignItems='center'
-        sx={{ maxWidth: 'lg', width: '100%' }}
+        alignItems='stretch'
+        sx={{ maxWidth: 'xl', width: '100%' }}
       >
         {posts.map((post) => (
-          <Card
-            key={post.id}
-            elevation={3}
-            sx={{
-              width: { xs: '100%', sm: 280 },
-              height: '100%',
-              backgroundColor: 'common.white',
-            }}
-          >
-            <CardActionArea
-              component='a'
-              href={post.href}
-              target='_blank'
-              sx={{ p: 2, height: '100%' }}
+          <Grid key={post.id} size={{ xs: 12, sm: 6, lg: 3 }}>
+            <Card
+              elevation={3}
+              sx={{
+                height: '100%',
+                backgroundColor: 'common.white',
+              }}
             >
-              <CardMedia
-                component='img'
-                height='200'
-                image={post.image}
-                alt={post.title}
-                loading='lazy'
-                sx={{ objectFit: 'cover' }}
-              />
-              <CardContent>
-                <Typography
-                  variant='h6'
-                  component='h3'
-                  sx={{ lineHeight: 1.2, textAlign: 'center' }}
-                  color='#828ca4'
-                >
-                  {post.title}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+              <CardActionArea
+                component='a'
+                href={post.href}
+                target='_blank'
+                sx={{ p: 2, height: '100%' }}
+              >
+                <CardMedia
+                  component='img'
+                  height='200'
+                  image={post.image}
+                  alt={post.title}
+                  loading='lazy'
+                  sx={{ objectFit: 'cover' }}
+                />
+                <CardContent>
+                  <Typography
+                    variant='h6'
+                    component='h3'
+                    sx={{ lineHeight: 1.2, textAlign: 'center' }}
+                    color='#828ca4'
+                  >
+                    {post.title}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
         ))}
       </Grid>
     </Grid>

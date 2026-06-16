@@ -11,7 +11,7 @@ export default function AboutMe() {
       alignItems='center'
       sx={{
         backgroundColor: 'common.white',
-        px: { xs: 2, sm: 4 },
+        px: { xs: 2, sm: 4, md: 6, lg: 8 },
         py: { xs: 5, sm: 7, md: 9 },
       }}
       width='100%'
@@ -19,7 +19,7 @@ export default function AboutMe() {
       <Grid
         container
         direction='column'
-        maxWidth='md'
+        maxWidth='xl'
         width='100%'
         mb={2}
         alignItems='center'
@@ -30,7 +30,7 @@ export default function AboutMe() {
         <Divider
           sx={{
             width: '100%',
-            maxWidth: 'md',
+            maxWidth: 'xl',
             mx: 'auto',
             height: 2,
             bgcolor: 'primary.main',

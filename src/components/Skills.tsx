@@ -41,7 +41,7 @@ export default function Skills() {
       alignItems='center'
       justifyContent={'center'}
       sx={{
-        px: { xs: 2, sm: 4 },
+        px: { xs: 2, sm: 4, md: 6, lg: 8 },
         py: { xs: 5, sm: 7, md: 9 },
       }}
       width={'100%'}
@@ -52,7 +52,7 @@ export default function Skills() {
       <Divider
         sx={{
           width: '100%',
-          maxWidth: 'md',
+          maxWidth: 'xl',
           mx: 'auto',
           height: 2,
           bgcolor: 'primary.main',
@@ -64,7 +64,7 @@ export default function Skills() {
       <Grid
         container
         spacing={3}
-        sx={{ maxWidth: 'lg', mx: 'auto', width: '100%' }}
+        sx={{ maxWidth: 'xl', mx: 'auto', width: '100%' }}
       >
         {SKILLS.map((cat) => (
           <Grid key={cat.title} size={{ xs: 12, sm: 6, md: 4 }}>
