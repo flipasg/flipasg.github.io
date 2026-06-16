@@ -1,3 +1,8 @@
+import enredoImage from '@/assets/blog-enredo.jpg'
+import haikuImage from '@/assets/blog-haiku.jpg'
+import poemaImage from '@/assets/blog-poema.jpg'
+import relatoImage from '@/assets/blog-relato.jpg'
+
 export type Post = {
   id: string
   title: string
@@ -14,24 +19,24 @@ export const posts: Post[] = [
     id: 'enredos',
     title: 'Enredos',
     href: 'https://www.silencioenlasala.com/enredos',
-    image: 'https://silencioenlasala.com/images/light/enredos.png',
+    image: enredoImage,
   },
   {
     id: 'haikus',
     title: 'Haikus',
     href: 'https://www.silencioenlasala.com/haikus',
-    image: 'https://silencioenlasala.com/images/light/haikus.png',
+    image: haikuImage,
   },
   {
     id: 'poemas',
     title: 'Poemas',
     href: 'https://www.silencioenlasala.com/poemas',
-    image: 'https://silencioenlasala.com/images/light/poemas.png',
+    image: poemaImage,
   },
   {
     id: 'relatos',
     title: 'Relatos',
     href: 'https://www.silencioenlasala.com/relatos',
-    image: 'https://silencioenlasala.com/images/light/relatos.png',
+    image: relatoImage,
   },
 ]

@@ -20,6 +20,10 @@ describe('Blog', () => {
         .getAllByRole('link')
         .find((a) => (a as HTMLElement).getAttribute('href') === p.href)
       expect(link).toBeTruthy()
+
+      const image = screen.getByRole('img', { name: p.title })
+      const imageName = p.image.split('/').at(-1)
+      expect(image).toHaveAttribute('src', expect.stringContaining(imageName))
     })
   })
 
