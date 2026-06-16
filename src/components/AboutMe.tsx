@@ -1,5 +1,21 @@
-import { Divider, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid'
+import SectionHeading from './SectionHeading'
+
+const WORKING_PRINCIPLES = [
+  {
+    title: 'Communicative',
+    body: 'Clear, collaborative communication across product, design, backend, and client teams.',
+  },
+  {
+    title: 'Creative',
+    body: 'Comfortable prototyping, experimenting, and turning feedback into practical improvements.',
+  },
+  {
+    title: 'Team spirit',
+    body: 'Adaptive, collaborative, and focused on consistent impact in cross-functional teams.',
+  },
+]
 
 export default function AboutMe() {
   return (
@@ -10,7 +26,7 @@ export default function AboutMe() {
       justifyContent='center'
       alignItems='center'
       sx={{
-        backgroundColor: 'common.white',
+        backgroundColor: 'background.paper',
         px: { xs: 2, sm: 4, md: 6, lg: 8 },
         py: { xs: 5, sm: 7, md: 9 },
       }}
@@ -18,41 +34,74 @@ export default function AboutMe() {
     >
       <Grid
         container
-        direction='column'
         maxWidth='xl'
         width='100%'
-        mb={2}
-        alignItems='center'
+        spacing={3}
+        alignItems='flex-start'
       >
-        <Typography variant='h2' fontSize={36} mb={2} textAlign='center'>
-          About me
-        </Typography>
-        <Divider
-          sx={{
-            width: '100%',
-            maxWidth: 'xl',
-            mx: 'auto',
-            height: 2,
-            bgcolor: 'primary.main',
-            borderRadius: 1,
-            mb: 3,
-          }}
-        />
-        <Grid container direction='column' gap={2}>
-          <Typography variant='body1' color='primary'>
-            I love challenges, technology and learning. I like to be part of the
-            process of creating and evolving a project.
-          </Typography>
-          <Typography variant='body1' color='primary'>
-            I deal with situations proactively and adapt to changes. I like to
-            receive different stimuli, creative, logical or functional, and take
-            advantage of and learn from them in my day to day.
-          </Typography>
-          <Typography variant='body1' color='primary'>
-            I have more than 10 years of experience building scalable web
-            applications, GIS platforms, and AI-powered products for public and
-            private organizations.
-          </Typography>
+        <Grid size={12}>
+          <SectionHeading
+            align='left'
+            eyebrow='About'
+            title='About me'
+            description='Frontend Engineer with 10+ years of experience in scalable web apps, GIS platforms, and AI-powered products.'
+          />
+        </Grid>
+
+        <Grid size={12}>
+          <Grid container spacing={{ xs: 4, md: 7 }} alignItems='flex-start'>
+            <Grid size={{ xs: 12, md: 7 }}>
+              <Stack spacing={2}>
+                <Typography variant='body1' color='text.primary'>
+                  I design and build responsive frontend architectures for
+                  complex products, with a strong focus on performance,
+                  accessibility, and clear user experience across devices.
+                </Typography>
+                <Typography variant='body1' color='text.primary'>
+                  My work spans GIS platforms, AI-driven tools, conversational
+                  interfaces, and enterprise applications for public and private
+                  clients.
+                </Typography>
+                <Typography variant='body1' color='text.primary'>
+                  I have more than 10 years of experience collaborating in
+                  cross-functional teams, mentoring developers, leading
+                  prototypes, and turning product ideas into reliable, scalable
+                  web applications.
+                </Typography>
+              </Stack>
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 5 }}>
+              <Box
+                component='aside'
+                aria-label='Working principles'
+                sx={{
+                  borderLeft: { xs: 0, md: '3px solid' },
+                  borderTop: { xs: '3px solid', md: 0 },
+                  borderColor: 'secondary.main',
+                  pl: { xs: 0, md: 3 },
+                  pt: { xs: 3, md: 0 },
+                }}
+              >
+                <Stack spacing={2.5}>
+                  {WORKING_PRINCIPLES.map((principle) => (
+                    <Box key={principle.title}>
+                      <Typography
+                        variant='overline'
+                        color='secondary.main'
+                        sx={{ lineHeight: 1.4 }}
+                      >
+                        {principle.title}
+                      </Typography>
+                      <Typography variant='body1' color='text.secondary'>
+                        {principle.body}
+                      </Typography>
+                    </Box>
+                  ))}
+                </Stack>
+              </Box>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
