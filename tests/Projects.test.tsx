@@ -11,9 +11,10 @@ describe('Projects', () => {
     const { container } = render(<Projects />)
 
     expect(screen.getByText(/Work Experience/i)).toBeInTheDocument()
+    expect(screen.getByText('COTESA')).toBeInTheDocument()
 
     projectsMod.PROJECTS.forEach((p: any) => {
-      expect(screen.getByText(p.role)).toBeInTheDocument()
+      expect(screen.getAllByText(p.role).length).toBeGreaterThanOrEqual(1)
     })
 
     const first = projectsMod.PROJECTS[0]

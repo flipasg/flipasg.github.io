@@ -11,6 +11,26 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    title: 'COTESA GIS Solutions',
+    role: 'Full Stack Engineer',
+    company: 'COTESA',
+    period: 'Oct 2025 – Present',
+    description:
+      'At COTESA, I develop GIS web solutions for government and private clients, delivering projects in cross-functional teams with a focus on consistent client impact, scalable architecture, and accessible geospatial experiences.',
+    tech: [
+      'GIS Applications',
+      'React',
+      'TypeScript',
+      'Node',
+      'SQL',
+      'OpenLayers',
+      'Leaflet',
+      'Data Visualization',
+      'Accessibility',
+    ],
+    image: 'cotesa',
+  },
+  {
     title: 'Frenetic Simulator & AI',
     role: 'Full Stack Engineer',
     company: 'Frenetic',

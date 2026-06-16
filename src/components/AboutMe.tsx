@@ -49,8 +49,9 @@ export default function AboutMe() {
             advantage of and learn from them in my day to day.
           </Typography>
           <Typography variant='body1' color='primary'>
-            I have worked as a software/product engineer creating and evolving
-            projects and products in different technologies.
+            I have more than 10 years of experience building scalable web
+            applications, GIS platforms, and AI-powered products for public and
+            private organizations.
           </Typography>
         </Grid>
       </Grid>

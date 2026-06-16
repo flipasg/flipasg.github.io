@@ -6,7 +6,7 @@ describe('App', () => {
     render(<App />)
 
     expect(
-      screen.getByText(/I have worked as a software\/product engineer/i),
+      screen.getByText(/more than 10 years of experience/i),
     ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /Work Experience/i }),

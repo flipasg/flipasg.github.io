@@ -22,6 +22,8 @@ export const SKILLS: SkillCategory[] = [
       'Prompt engineering',
       'Langfuse',
       'GitHub Copilot',
+      'OpenAI',
+      'Memory bank',
       'ChatGPT',
       'Claude',
     ],
@@ -71,7 +73,15 @@ export const SKILLS: SkillCategory[] = [
   {
     title: 'Design & Tools',
     icon: 'tools',
-    items: ['Figma', 'Canva', 'VS Code'],
+    items: [
+      'Cursor',
+      'Codex',
+      'VS Code',
+      'Figma',
+      'Canva',
+      'Google Workspace',
+      'MS365',
+    ],
   },
   {
     title: 'Infrastructure Patterns',
